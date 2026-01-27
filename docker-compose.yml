@@ -4,7 +4,7 @@ services:
     image: postgres:15
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=pass
+      - POSTGRES_PASSWORD=jennifer
       - POSTGRES_DB=happy_testing
     ports:
       - "5432:5432"
@@ -15,11 +15,11 @@ services:
     build: .
     command: ["/bin/bash", "./docker/dev-entrypoint.sh"]
     environment:
-      - DATABASE_URL=postgresql://postgres:pass@db:5432/happy_testing?schema=public
+      - DATABASE_URL=postgresql://postgres:jennifer@db:5432/happy_testing?schema=public
       - DB_HOST=db
       - DB_PORT=5432
       - DB_USER=postgres
-      - DB_PASS=pass
+      - DB_PASS=jennifer
     volumes:
       - .:/usr/src/app
     ports:
