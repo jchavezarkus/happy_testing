@@ -62,7 +62,7 @@ jobs:
       - name: Seed database
         env:
           DATABASE_URL: postgresql://postgres:jennifer@localhost:5432/happy_testing?schema=public
-        run: npx ts-node seed.ts
+        run: node --loader ts-node/esm seed.ts
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
