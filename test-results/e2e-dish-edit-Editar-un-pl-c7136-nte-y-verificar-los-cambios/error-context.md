@@ -86,42 +86,29 @@
           - generic [ref=e73]:
             - generic [ref=e74]: Sin imagen
             - generic [ref=e75]: Rápido
-          - heading "Test Bowl" [level=2] [ref=e76]
-          - paragraph [ref=e77]: E2E edited at 1769475737826
+          - heading "Flow 1769475868278" [level=2] [ref=e76]
+          - paragraph [ref=e77]: Bowl de prueba con ingredientes saludables
           - generic [ref=e78]:
             - generic [ref=e79]:
               - link "Ver" [ref=e80] [cursor=pointer]:
-                - /url: /dishes/28/view
+                - /url: /dishes/37/view
               - link "Editar" [ref=e81] [cursor=pointer]:
-                - /url: /dishes/28
+                - /url: /dishes/37
             - button "Eliminar" [ref=e82]
         - generic [ref=e83]:
           - generic [ref=e84]:
             - generic [ref=e85]: Sin imagen
             - generic [ref=e86]: Rápido
-          - heading "Del 1769475868165" [level=2] [ref=e87]
-          - paragraph [ref=e88]: Bowl de prueba con ingredientes saludables
+          - heading "Test Bowl" [level=2] [ref=e87]
+          - paragraph [ref=e88]: E2E edited at 1769475880272
           - generic [ref=e89]:
             - generic [ref=e90]:
               - link "Ver" [ref=e91] [cursor=pointer]:
-                - /url: /dishes/36/view
-              - link "Editar" [ref=e92] [cursor=pointer]:
-                - /url: /dishes/36
-            - button "Eliminar" [active] [ref=e93]
-        - generic [ref=e94]:
-          - generic [ref=e95]:
-            - generic [ref=e96]: Sin imagen
-            - generic [ref=e97]: Rápido
-          - heading "Flow 1769475868278" [level=2] [ref=e98]
-          - paragraph [ref=e99]: Bowl de prueba con ingredientes saludables
-          - generic [ref=e100]:
-            - generic [ref=e101]:
-              - link "Ver" [ref=e102] [cursor=pointer]:
-                - /url: /dishes/37/view
-              - link "Editar" [ref=e103] [cursor=pointer]:
-                - /url: /dishes/37
-            - button "Eliminar" [ref=e104]
-  - button "Open Next.js Dev Tools" [ref=e110] [cursor=pointer]:
-    - img [ref=e111]
-  - alert [ref=e114]
+                - /url: /dishes/28/view
+              - link "Editar" [active] [ref=e92] [cursor=pointer]:
+                - /url: /dishes/28
+            - button "Eliminar" [ref=e93]
+  - button "Open Next.js Dev Tools" [ref=e99] [cursor=pointer]:
+    - img [ref=e100]
+  - alert [ref=e103]
 ```
