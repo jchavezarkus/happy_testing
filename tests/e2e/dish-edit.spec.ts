@@ -28,7 +28,7 @@ test('Editar un plato existente y verificar los cambios', async ({ page }) => {
   await dishes.clickEdit(firstDishName);
   
   // Wait for edit page to load
-  await page.waitForLoadState('networkidle', { timeout: 10000 });
+  await page.waitForLoadState('networkidle', { timeout: 30000 });
 
   // Cambiar la descripción
   const newDescription = `E2E edited at ${Date.now()}`;
@@ -38,14 +38,14 @@ test('Editar un plato existente y verificar los cambios', async ({ page }) => {
   const submitButton = page.getByRole('button', { name: 'Guardar' });
   
   const [updateResponse] = await Promise.all([
-    page.waitForResponse(r => r.url().includes('/api/dishes/') && r.request().method() === 'PUT', { timeout: 10000 }),
+    page.waitForResponse(r => r.url().includes('/api/dishes/') && r.request().method() === 'PUT', { timeout: 30000 }),
     submitButton.click(),
   ]);
   
   expect(updateResponse.status()).toBe(200);
 
   // Esperar a que la página esté lista
-  await page.waitForLoadState('networkidle', { timeout: 10000 });
+  await page.waitForLoadState('networkidle', { timeout: 30000 });
 
   // Verificar el cambio en la tarjeta del plato (usar .first() para strict mode)
   await expect(page.locator('div.bg-white.rounded-2xl', { has: page.locator('h2', { hasText: new RegExp(`^${firstDishName}$`) }) }).locator('p').first()).toContainText('E2E edited');

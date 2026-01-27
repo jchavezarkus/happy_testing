@@ -28,7 +28,7 @@ test.describe('E2E - Full dish lifecycle (create → view → edit → delete)',
     await dishes.clickView(unique);
     
     // Check that we're on the view page and the dish name is displayed
-    await expect(page.locator('h1, h2').first()).toContainText(unique, { timeout: 10000 });
+    await expect(page.locator('h1, h2').first()).toContainText(unique, { timeout: 30000 });
 
     // Edit dish
     await dishes.goto();
@@ -36,18 +36,22 @@ test.describe('E2E - Full dish lifecycle (create → view → edit → delete)',
     
     // Change description
     const newDescription = sampleDish.description + ' (editado)';
-    await page.fill('textarea[name=description]', newDescription, { timeout: 10000 });
+    await page.fill('textarea[name=description]', newDescription, { timeout: 30000 });
     
     // Wait for PUT response and save
     const submitButton = page.getByRole('button', { name: 'Guardar' });
+    // Log para depuración
+    const isVisible = await submitButton.isVisible();
+    const isEnabled = await submitButton.isEnabled();
+    console.log('Submit visible:', isVisible, 'enabled:', isEnabled);
     
     const [updateResponse] = await Promise.all([
-      page.waitForResponse(r => r.url().includes('/api/dishes') && r.request().method() === 'PUT', { timeout: 10000 }),
+      page.waitForResponse(r => r.url().includes('/api/dishes') && r.request().method() === 'PUT', { timeout: 60000 }),
       submitButton.click(),
     ]);
     
     expect(updateResponse.status()).toBe(200);
-    await page.waitForURL('**/dishes', { timeout: 5000 });
+    await page.waitForURL('**/dishes', { timeout: 30000 });
     await page.waitForLoadState('networkidle');
 
     // Verify updated

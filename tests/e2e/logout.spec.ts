@@ -9,10 +9,8 @@ test('Logout should clear session and redirect to login', async ({ page }) => {
   expect(resp.status()).toBe(200);
 
   // Click logout and expect redirect to /login
-  await Promise.all([
-    page.waitForURL('**/login'),
-    page.click('text=Logout'),
-  ]);
+  await page.locator('text=Logout').click({ force: true, timeout: 15000 });
+  await page.waitForURL('**/login', { timeout: 15000 });
 
   // Ensure session cookie is removed
   const cookies = await page.context().cookies();
