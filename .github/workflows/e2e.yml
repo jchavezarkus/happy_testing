@@ -1,3 +1,7 @@
+      - name: Build Next.js app
+        env:
+          DATABASE_URL: postgresql://postgres:jennifer@localhost:5432/happy_testing?schema=public
+        run: npm run build
 name: E2E Tests
 
 on:
