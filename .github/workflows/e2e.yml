@@ -64,8 +64,23 @@ jobs:
           DATABASE_URL: postgresql://postgres:jennifer@localhost:5432/happy_testing?schema=public
         run: node --loader ts-node/esm seed.ts
 
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
+
+      - name: Start Next.js app
+        env:
+          DATABASE_URL: postgresql://postgres:jennifer@localhost:5432/happy_testing?schema=public
+        run: npm run start &
+
+      - name: Wait for Next.js
+        run: |
+          for i in {1..20}; do
+            nc -z localhost 3000 && echo "Next.js is up" && exit 0
+            echo "Waiting for Next.js..."
+            sleep 3
+          done
+          echo "Next.js did not start in time" && exit 1
 
       - name: Run E2E tests
         env:
