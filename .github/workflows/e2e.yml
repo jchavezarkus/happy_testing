@@ -66,8 +66,18 @@ jobs:
         run: node --loader ts-node/esm seed.ts
 
 
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
+
+      - name: Build Next.js app
+        env:
+          DATABASE_URL: postgresql://postgres:jennifer@localhost:5432/happy_testing?schema=public
+          DB_HOST: localhost
+          DB_PORT: 5432
+          DB_USER: postgres
+          DB_PASS: jennifer
+        run: npm run build
 
 
       - name: List .next directory
