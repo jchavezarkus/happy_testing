@@ -90,7 +90,32 @@ You can modify the components in `src/app` to adapt the app to your needs.
 	```bash
 	node --loader ts-node/esm seed.ts
 	```
-7. Start the application:
+
+---
+
+### Run with Docker (recommended if you want a reproducible dev DB)
+
+1. Start services (Postgres + app):
+```bash
+npm run docker:up
+```
+
+This will build the app image, start Postgres and run the dev server. The app will be reachable at http://localhost:3000.
+
+2. Run migrations or seed if needed:
+```bash
+npm run docker:migrate
+npm run docker:seed
+```
+
+3. Stop the environment:
+```bash
+npm run docker:down
+```
+
+---
+
+7. Start the application (without Docker):
 	```bash
 	npm run dev
 	```

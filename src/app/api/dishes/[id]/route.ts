@@ -1,8 +1,6 @@
 import { requireSession } from '@/app/lib/auth';
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 // GET: Get dish by id
 export async function GET(request: NextRequest, context: { params: Promise<{ id: string }> }) {

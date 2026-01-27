@@ -1,0 +1,127 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - img "NutriApp" [ref=e5]
+      - generic [ref=e6]: NutriApp
+    - navigation [ref=e7]:
+      - link "Recetas" [ref=e8] [cursor=pointer]:
+        - /url: /dishes
+      - button "Logout" [ref=e10]
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - heading "Sugerencias de Platillos" [level=1] [ref=e14]
+        - link "+ Agregar Platillo" [ref=e15] [cursor=pointer]:
+          - /url: /dishes/new
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]: Sin imagen
+            - generic [ref=e20]: Rápido
+          - heading "Test Bowl" [level=2] [ref=e21]
+          - paragraph [ref=e22]: E2E edited at 1769474017750
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - link "Ver" [ref=e25] [cursor=pointer]:
+                - /url: /dishes/10/view
+              - link "Editar" [ref=e26] [cursor=pointer]:
+                - /url: /dishes/10
+            - button "Eliminar" [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]: Sin imagen
+            - generic [ref=e31]: Rápido
+          - heading "Flow 1769474285433" [level=2] [ref=e32]
+          - paragraph [ref=e33]: Bowl de prueba con ingredientes saludables
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - link "Ver" [ref=e36] [cursor=pointer]:
+                - /url: /dishes/29/view
+              - link "Editar" [ref=e37] [cursor=pointer]:
+                - /url: /dishes/29
+            - button "Eliminar" [ref=e38]
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: Sin imagen
+            - generic [ref=e42]: Rápido
+          - heading "Flow 1769475253307" [level=2] [ref=e43]
+          - paragraph [ref=e44]: Bowl de prueba con ingredientes saludables
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - link "Ver" [ref=e47] [cursor=pointer]:
+                - /url: /dishes/31/view
+              - link "Editar" [ref=e48] [cursor=pointer]:
+                - /url: /dishes/31
+            - button "Eliminar" [ref=e49]
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Sin imagen
+            - generic [ref=e53]: Rápido
+          - heading "Del 1769472764607" [level=2] [ref=e54]
+          - paragraph [ref=e55]: E2E edited at 1769475260083
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - link "Ver" [ref=e58] [cursor=pointer]:
+                - /url: /dishes/22/view
+              - link "Editar" [ref=e59] [cursor=pointer]:
+                - /url: /dishes/22
+            - button "Eliminar" [ref=e60]
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: Sin imagen
+            - generic [ref=e64]: Rápido
+          - heading "Flow 1769475571857" [level=2] [ref=e65]
+          - paragraph [ref=e66]: Bowl de prueba con ingredientes saludables
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - link "Ver" [ref=e69] [cursor=pointer]:
+                - /url: /dishes/33/view
+              - link "Editar" [ref=e70] [cursor=pointer]:
+                - /url: /dishes/33
+            - button "Eliminar" [ref=e71]
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]: Sin imagen
+            - generic [ref=e75]: Rápido
+          - heading "Test Bowl" [level=2] [ref=e76]
+          - paragraph [ref=e77]: E2E edited at 1769475737826
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - link "Ver" [ref=e80] [cursor=pointer]:
+                - /url: /dishes/28/view
+              - link "Editar" [ref=e81] [cursor=pointer]:
+                - /url: /dishes/28
+            - button "Eliminar" [ref=e82]
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]: Sin imagen
+            - generic [ref=e86]: Rápido
+          - heading "Del 1769475868165" [level=2] [ref=e87]
+          - paragraph [ref=e88]: Bowl de prueba con ingredientes saludables
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - link "Ver" [ref=e91] [cursor=pointer]:
+                - /url: /dishes/36/view
+              - link "Editar" [ref=e92] [cursor=pointer]:
+                - /url: /dishes/36
+            - button "Eliminar" [ref=e93]
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - generic [ref=e96]: Sin imagen
+            - generic [ref=e97]: Rápido
+          - heading "Flow 1769475868278" [level=2] [ref=e98]
+          - paragraph [ref=e99]: Bowl de prueba con ingredientes saludables
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - link "Ver" [active] [ref=e102] [cursor=pointer]:
+                - /url: /dishes/37/view
+              - link "Editar" [ref=e103] [cursor=pointer]:
+                - /url: /dishes/37
+            - button "Eliminar" [ref=e104]
+  - button "Open Next.js Dev Tools" [ref=e110] [cursor=pointer]:
+    - img [ref=e111]
+  - alert [ref=e114]
+```
