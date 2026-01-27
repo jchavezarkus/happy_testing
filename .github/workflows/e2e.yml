@@ -69,10 +69,21 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Start Next.js app
+
+      - name: List .next directory
+        run: ls -l .next || echo ".next directory not found"
+
+      - name: Start Next.js app and log output
         env:
           DATABASE_URL: postgresql://postgres:jennifer@localhost:5432/happy_testing?schema=public
-        run: npm run start &
+          DB_HOST: localhost
+          DB_PORT: 5432
+          DB_USER: postgres
+          DB_PASS: jennifer
+        run: |
+          npm run start > nextjs.log 2>&1 &
+          sleep 5
+          cat nextjs.log || true
 
       - name: Wait for Next.js
         run: |
