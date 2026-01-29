@@ -1,0 +1,61 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - img "NutriApp" [ref=e5]
+      - generic [ref=e6]: NutriApp
+    - navigation [ref=e7]:
+      - link "Recetas" [ref=e8] [cursor=pointer]:
+        - /url: /dishes
+      - button "Logout" [ref=e10]
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - heading "Agregar Platillo" [level=1] [ref=e13]
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - heading "Información básica" [level=2] [ref=e16]
+          - generic [ref=e17]:
+            - generic [ref=e18]: Nombre
+            - 'textbox "Ej: Ensalada de quinoa" [ref=e19]': Flow 1769558818940
+          - generic [ref=e20]:
+            - generic [ref=e21]: Descripción
+            - textbox "Describe el platillo, ingredientes principales, etc." [ref=e22]: Bowl de prueba con ingredientes saludables
+          - generic [ref=e23]:
+            - checkbox "Preparación rápida" [checked] [ref=e24]
+            - generic [ref=e25]: Preparación rápida
+            - generic [ref=e26]: Menos de 20 min
+        - generic [ref=e27]:
+          - heading "Detalles" [level=2] [ref=e28]
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]: Min. preparación
+              - spinbutton [ref=e32]: "10"
+            - generic [ref=e33]:
+              - generic [ref=e34]: Min. cocción
+              - spinbutton [ref=e35]: "5"
+          - generic [ref=e36]:
+            - generic [ref=e37]: Calorías totales
+            - spinbutton [ref=e38]: "300"
+          - generic [ref=e39]:
+            - generic [ref=e40]: URL de imagen
+            - textbox "https://..." [ref=e41]
+        - generic [ref=e42]:
+          - heading "Pasos de preparación" [level=2] [ref=e43]
+          - paragraph [ref=e44]: Agrega los pasos uno a uno para guiar la preparación del platillo.
+          - generic [ref=e45]:
+            - textbox "Paso 1" [ref=e46]: Cortar
+            - button "×" [ref=e47]
+          - generic [ref=e48]:
+            - textbox "Paso 2" [ref=e49]: Mezclar
+            - button "×" [ref=e50]
+          - generic [ref=e51]:
+            - textbox "Paso 3" [ref=e52]: Servir
+            - button "×" [ref=e53]
+          - button "+ Agregar paso" [ref=e54]
+        - button "Guardar" [ref=e56]
+  - button "Open Next.js Dev Tools" [ref=e62] [cursor=pointer]:
+    - img [ref=e63]
+  - alert [ref=e66]
+```
